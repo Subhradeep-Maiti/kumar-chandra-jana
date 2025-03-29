@@ -15,14 +15,14 @@ function App() {
         {/* Navbar */}
         <nav className="navbar">
           <div className="logo">
-            <h2>Kumar Chandra Jana</h2>
+            <h2 data-testid="kcjana">Kumar Chandra Jana</h2>
           </div>
           <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/biography">Biography</a></li>
-            <li><a href="/achievements">Achievements</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/" data-testid="Home">Home</a></li>
+            <li><a href="/biography" data-testid="Biography">Biography</a></li>
+            <li><a href="/achievements" data-testId="Achievements">Achievements</a></li>
+            <li><a href="/gallery" data-testid="Gallery">Gallery</a></li>
+            <li><a href="/contact" data-testid="Contact">Contact</a></li>
           </ul>
         </nav>
 
