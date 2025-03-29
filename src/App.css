@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar Styling */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.navbar .nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-right: 20px;
+}
+
+.navbar .nav-links li a {
   color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .nav-links li a:hover {
+  color: #ff6f61;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Home and Introduction Page */
+.introduction-container {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #fff;
+}
+
+.introduction-container h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.introduction-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.introduction-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.introduction-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Biography Page */
+.biography-container {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.biography-container h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.biography-container p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Achievements Page */
+.achievements-container {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.achievements-container h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.achievements-container ul {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.achievements-container ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Gallery Page */
+.gallery-container {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.gallery-container h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-container .images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-container .images img {
+  width: 300px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-container .images img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Page */
+.contact-container {
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.contact-container h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-container iframe {
+  width: 100%;
+  height: 1000px;
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .introduction-container h1 {
+    font-size: 30px;
+  }
+
+  .biography-container, .achievements-container, .gallery-container, .contact-container {
+    padding: 30px 20px;
+  }
+
+  .gallery-container .images {
+    flex-direction: column;
+    align-items: center;
   }
 }
